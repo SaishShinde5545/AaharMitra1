@@ -19,10 +19,10 @@ app.use(express.static(path.join(__dirname, "public"))); // frontend files
 
 // MySQL connection
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",       // change if different
-  password: "sakshi",       // add your MySQL password
-  database: "aahaarmitra"
+  host: "sql12.freesqldatabase.com:3360",
+  user: "sql12805514",       // change if different
+  password: "kdCtrEXSua",       // add your MySQL password
+  database: "sql12805514"
 });
 
 db.connect((err) => {
@@ -452,3 +452,4 @@ app.post("/saveStudentPayments", (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
+
