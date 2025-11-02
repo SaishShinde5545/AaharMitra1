@@ -57,26 +57,26 @@ app.post("/register", (req, res) => {
 });
 
 // ----------------- LOGIN ROUTE -----------------
-// app.post('/login', (req, res) => {
-//   const { username, password } = req.body;
+app.post('/login', (req, res) => {
+  const { username, password } = req.body;
 
-//   db.query('SELECT * FROM registration WHERE username = ? AND password = ?', 
-//   [username, password], (err, results) => {
-//     if (err) return res.status(500).json({ success: false, message: "DB error" });
+  db.query('SELECT * FROM registration WHERE username = ? AND password = ?', 
+  [username, password], (err, results) => {
+    if (err) return res.status(500).json({ success: false, message: "DB error" });
 
-//     if (results.length > 0) {
-//       const user = results[0];
-//       res.json({
-//         success: true,
-//         message: "Login successful",
-//         role: user.role,   // assuming you have a 'role' column in DB
-//         username: user.username
-//       });
-//     } else {
-//       res.status(401).json({ success: false, message: "Invalid credentials" });
-//     }
-//   });
-// });
+    if (results.length > 0) {
+      const user = results[0];
+      res.json({
+        success: true,
+        message: "Login successful",
+        role: user.role,   // assuming you have a 'role' column in DB
+        username: user.username
+      });
+    } else {
+      res.status(401).json({ success: false, message: "Invalid credentials" });
+    }
+  });
+});
 
 
 //New Login Route 
@@ -453,6 +453,7 @@ app.post("/saveStudentPayments", (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
+
 
 
 
