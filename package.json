@@ -1,9 +1,9 @@
 {
   "name": "aahaarmitra",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "../backend/server.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node ../backend/server.js"
   },
   "keywords": [],
   "author": "",
