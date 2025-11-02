@@ -1,0 +1,150 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+/*background-image: url('background.jpg'); /* Change path if needed 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;*/
+  color: #090909;
+  min-height: 100vh;
+}
+form label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+/* Header Container */
+header {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+  border-radius: 12px;
+  margin: 20px;
+}
+
+/* Logo Styling */
+/* General Logo Styling */
+.logo {
+  max-width: 100px; /* Limit the width */
+  height: auto;     /* Maintain aspect ratio */
+  display: block;
+  margin: 10px auto; /* Center it */
+}
+
+/* If logo is inside header with flexbox */
+.header-logo {
+  width: 120px;
+  height: auto;
+  margin-left: 10px;
+}
+
+
+/* Title & Tagline */
+.header-text {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.header-text h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.header-text p {
+  font-size: 16px;
+  font-style: italic;
+  color: #0d0d0d;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.nav-buttons button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2980b9;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-buttons button:hover {
+  background-color: #1c5d8b;
+}
+
+/* Hide extra link lists if any */
+.hidden-links {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .logo {
+    margin-bottom: 15px;
+  }
+
+  .nav-buttons {
+    gap: 10px;
+  }
+
+  .nav-buttons button {
+    font-size: 13px;
+    padding: 9px 14px;
+  }
+}
+/* Footer Styling */
+footer {
+  background-color: #1f2a40;
+  color: #ffffff;
+  text-align: center;
+  padding: 5px 5px;
+  margin-top: 70px;
+  font-size: 12px;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer-content p {
+  margin: 10px 0;
+  line-height: 1.4;
+}
+/* Make body take full height of page */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make main content grow to push footer down */
+main {
+  flex: 1;
+}

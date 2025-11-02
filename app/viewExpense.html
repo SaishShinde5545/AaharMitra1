@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>View Expense</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .controls {
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #222020;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background: #1c7448;
+    }
+    .results {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #103c21;
+      background: #2f8964;
+    }
+    .results p {
+      margin: 6px 0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>View Monthly Expense</h2>
+
+  <!-- Month Selection -->
+  <div class="controls">
+    <label for="month">Select Month:</label>
+    <select id="month">
+      <option value="01">January</option>
+      <option value="02">February</option>
+      <option value="03">March</option>
+      <option value="04">April</option>
+      <option value="05">May</option>
+      <option value="06">June</option>
+      <option value="07">July</option>
+      <option value="08">August</option>
+      <option value="09">September</option>
+      <option value="10">October</option>
+      <option value="11">November</option>
+      <option value="12">December</option>
+    </select>
+    <button id="fetchExpenseBtn">Fetch Expense</button>
+  </div>
+
+  <!-- Results Section -->
+  <div class="results" id="expenseResult">
+    <p>Total Days: <span id="totalDays">0</span></p>
+    <p>Total Cost: ₹<span id="totalCost">0</span></p>
+    <p>Deduction: ₹<span id="deduction">0</span></p>
+    <p>Final Expense: ₹<span id="finalExpense">0</span></p>
+  </div>
+
+  <!-- Absentees Table -->
+  <h3>Absentees</h3>
+  <table id="absentForm">
+    <thead>
+      <tr>
+        <th>Name</th>  <!-- using NAME instead of username -->
+        <th>Slot</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Filled dynamically from DB -->
+    </tbody>
+  </table>
+
+  <!-- JS File -->
+  <script src="viewExpense.js"></script>
+</body>
+</html>

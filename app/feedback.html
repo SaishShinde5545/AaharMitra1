@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback - AahaarMitra</title>
+  <link rel="stylesheet" href="styles.css">
+
+
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f7f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 15px 30px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: vertical;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2e7d32;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AahaarMitra</h1>
+    <p>A healthy companion for nutritious meals!</p>
+  </header>
+
+  <div class="container">
+    <h2>Feedback Form</h2>
+    <form id="feedbackForm">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="mobile">Mobile No.</label>
+      <input type="mobile" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+
+      <label for="feedback">Your Feedback</label>
+      <textarea id="feedback" name="feedback" rows="6" placeholder="Write your feedback here..." required></textarea>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 AahaarMitra. All rights reserved.
+  </footer>
+    <!-- load auth.js AFTER DOM is ready -->
+  <script defer src="auth.js"></script>
+</body>
+</html>
