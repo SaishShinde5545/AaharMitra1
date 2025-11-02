@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mark Absentee - AahaarMitra</title>
+  <link rel="stylesheet" href="styles.css" />
+    <script src="auth.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fcfffe;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: rgb(252, 249, 249);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #006a4e;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border: 1px solid #0a0a0a;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .slot-options {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .slot-options label {
+      font-weight: normal;
+      display: flex;
+      align-items: center;
+    }
+
+    .slot-options input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background-color: #009970;
+      color: rgb(8, 8, 8);
+      border: none;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #007a5e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Mark Absentee</h2>
+    <form id="absentForm">
+      <label for="studentName">Student Name:</label>
+      <input type="text" id="studentName" name="studentName" placeholder="Enter your Username" required>
+
+      <label for="date">Date of Absence:</label>
+      <input type="date" id="date" name="date" required>
+      <label>Select Slot(s) to Mark Absent:</label>
+      <div class="slot">
+        <label><input type="checkbox" name="slots" value="morning"> Morning</label>
+        <label><input type="checkbox" name="slots" value="evening"> Evening</label>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
+

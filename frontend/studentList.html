@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student List</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* General body style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f8f5; /* light green background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #fcfbfb; /* slightly lighter green */
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(250, 250, 250, 0.1);
+}
+
+/* Page title */
+h1 {
+    text-align: center;
+    color: #2e7d32; /* dark green */
+    margin-bottom: 30px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin-top: 20px; /* space above the table */
+     margin-right: 20px;
+     margin-left: 20px;
+    font-size: 16px;
+}
+
+table thead {
+    background-color: #2e7d32; /* green header */
+    color: white;
+}
+
+table th, table td {
+    padding: 22px 20px;
+    text-align: center;
+    border: 1px solid #2e7d32; /* light green borders */
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f4f8f4; /* alternate row color */
+}
+
+table tbody tr:hover {
+    background-color: #a5d6a7; /* hover effect */
+}
+
+/* Input inside table */
+table input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #66bb6a;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    background-color: #43a047; /* green */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 20px;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #2e7d32; /* darker green on hover */
+}
+
+/* Month/Year selectors */
+select, input[type="number"] {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #66bb6a;
+    margin-right: 500px;
+     margin-bottom: 20px; /* space above the table */
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+    table th, table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+  </style>
+</head>
+<body>
+  <h2>Student List</h2>
+  Month: <input type="number" id="month" value="8" min="1" max="12">
+  Year: <input type="number" id="year" value="2025">
+  <button id="loadBtn">Load List</button>
+
+  <table border="1" id="studentTable">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Username</th>
+      <th>Mobile</th>
+      <th>Absent Slots</th>
+      <th>Total Expense</th>
+      <th>Paid Amount</th>
+      <th>Remaining Amount</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<button id="saveBtn">Save Payments</button>
+
+  <script src="studentList.js"></script>
+</body>
+</html>

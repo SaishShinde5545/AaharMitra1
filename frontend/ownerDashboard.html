@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Owner Dashboard - AahaarMitra</title>
+  <script src="auth.js"></script>
+   <style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #fcfafa;
+    color: #333;
+  }
+
+  /* Logo */
+  .logo {
+     max-width: 100px; /* Limit the width */
+  height: auto;     /* Maintain aspect ratio */
+  display: block;
+  margin: 10px auto; /* Center it */
+  }
+
+  .logo img {
+    width: 120px;
+    height: auto;
+  }
+
+  /* Title */
+  h1 {
+    font-size: 28px;
+    margin: 15px 0 5px 0;
+    font-weight: bold;
+  }
+
+  p.subtitle {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 30px;
+  }
+
+  /* Buttons */
+  .button-container {
+    margin: 20px 0;
+  }
+
+  .button-container button {
+      padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  background-color: #2980b9;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  }
+
+  .button-container button:hover {
+    background-color: #0d47a1;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #0c1c2b;
+    color: white;
+    padding: 20px;
+    margin-top: 70px;
+     
+  }
+
+  footer h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  footer p {
+    margin: 6px 0;
+    font-size: 14px;
+  }
+
+  footer a {
+    color: #64b5f6;
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+  <!-- Header -->
+  <header class="top-header">
+    <div class="logo-title-container">
+      <img src="logo.png" alt="AahaarMitra Logo" class="logo" />
+      <h1 class="title">AahaarMitra</h1>
+    </div>
+    <p class="tagline">A healthy companion for nutritious meals!</p>
+    <nav class="nav-bar">
+      <button onclick="location.href='index.html'">Home</button>
+       <button onclick="location.href='login.html'">LogOut</button>
+       <button onclick="location.href='studentList.html'">View Student</button>
+       <button onclick="location.href='menu.html'">Menu</button>
+        <button onclick="location.href='viewFeedback.html'">View Feedback</button>
+    </nav>
+  </header>
+
+  <!-- Sidebar 
+  <aside class="sidebar">
+    <ul>
+      <li><a href="ownerDashboard.html">Dashboard</a></li>
+      <li><a href="#">Student List</a></li>
+      <li><a href="#">Manage Menu</a></li>
+      <li><a href="#">View Feedback</a></li>
+      <li><a href="#">Monthly Expenses</a></li>
+    </ul>
+  </aside>-->
+
+  <!-- Main Dashboard Content 
+  <main class="main-content">
+    <section class="dashboard-section">
+      <h2>Welcome, Mess Owner</h2>
+
+     <div class="dashboard-cards">
+        <!--we can add card as per our choice here-->
+      <!-- Student Table 
+      <div class="table-section">
+        <h3>Registered Students</h3>
+        <table class="info-table">
+          <thead>
+            <tr>
+              <th>Sr. No.</th>
+              <th>Name</th>
+              <th>Mobile</th>
+              <th>Present Days</th>
+              <th>Expense</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Amit Patil</td>
+              <td>9876543210</td>
+              <td>22</td>
+              <td>₹2640</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Sakshi Khaire</td>
+              <td>9988776655</td>
+              <td>24</td>
+              <td>₹2880</td>
+            </tr>-->
+            <!-- Add more student rows here -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p><strong>Address:</strong> Behind Hotel Maharaj,Varche Gav,chandwad,Nashik, Maharashtra</p>
+    <p><strong>Contact:</strong> +91-95452 46264 </p>
+  </footer>
+
+
+    <!------auth check for owner---->
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const role = sessionStorage.getItem("role");
+    if (role !== "owner") {
+        alert("❌ Access denied!");
+        window.location.href = "index.html"; // redirect to login
+    }
+});
+</script>
+
+</body>
+</html>

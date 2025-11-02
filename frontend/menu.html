@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mess Menu - AahaarMitra</title>
+ 
+  <script src="menu.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f2f2f2;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2d3436;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background-color: white;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #00b894;
+      color: white;
+    }
+
+    .add-menu-form {
+      background: #dfe6e9;
+      padding: 20px;
+      border-radius: 5px;
+      margin-top: 30px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    input, select, button {
+      padding: 10px;
+      margin: 10px 0;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #00b894;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #019875;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Today's Mess Menu</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Day</th>
+        <th>Lunch</th>
+        <th>Dinner</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- More rows as needed -->
+    </tbody>
+  </table>
+
+  <!-- Only show this section if user is owner -->
+  <div class="add-menu-form">
+    <h2>Add New Menu Item</h2>
+    <form id="menuForm">
+       <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required />
+      <label for="day">Day:</label>
+      <select id="day" name="day" required>
+        <option value="">Select Day</option>
+        <option>Monday</option>
+        <option>Tuesday</option>
+        <option>Wednesday</option>
+        <option>Thursday</option>
+        <option>Friday</option>
+        <option>Saturday</option>
+        <option>Sunday</option>
+      </select>
+
+      <!--<label for="breakfast">Breakfast:</label>
+      <input type="text" id="breakfast" name="breakfast" required />-->
+
+      <label for="lunch">Lunch:</label>
+      <input type="text" id="lunch" name="lunch" required />
+
+      <label for="dinner">Dinner:</label>
+      <input type="text" id="dinner" name="dinner" required />
+
+      <button type="submit">Add Menu</button>
+    </form>
+  </div>
+</body>
+</html>
