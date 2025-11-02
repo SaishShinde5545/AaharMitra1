@@ -1,8 +1,9 @@
 const mysql = require('mysql2');
 const connection = mysql.createConnection({
-  host: 'sql12.freesqldatabase.com:3360', // or your DB host
+  host: 'sql12.freesqldatabase.com', // or your DB host
   user: 'sql12805514', // your MySQL username 
-  password: 'kdCtrEXSua', // your MySQL password
+  password: 'kdCtrEXSua',
+  port: 3360,// your MySQL password
  database: 'sql12805514' // your database name
   });
   connection.connect((err) => {
@@ -13,3 +14,4 @@ const connection = mysql.createConnection({
      }); 
 
   module.exports = connection;
+
