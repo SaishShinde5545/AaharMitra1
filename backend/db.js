@@ -3,7 +3,7 @@ const connection = mysql.createConnection({
   host: 'sql12.freesqldatabase.com', // or your DB host
   user: 'sql12805514', // your MySQL username 
   password: 'kdCtrEXSua',
-  port: 3360,// your MySQL password
+  port: 3306,// your MySQL password
  database: 'sql12805514' // your database name
   });
   connection.connect((err) => {
@@ -14,4 +14,5 @@ const connection = mysql.createConnection({
      }); 
 
   module.exports = connection;
+
 
