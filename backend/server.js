@@ -22,7 +22,7 @@ const db = mysql.createConnection({
   host: "sql12.freesqldatabase.com",
   user: "sql12805514",       // change if different
   password: "kdCtrEXSua",   
-  port: 3360,// add your MySQL password
+  port: 3306,// add your MySQL password
   database: "sql12805514"
 });
 
@@ -453,5 +453,6 @@ app.post("/saveStudentPayments", (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
+
 
 
