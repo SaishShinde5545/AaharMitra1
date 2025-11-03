@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css"/>
+    <script src="auth.js"></script>
+  
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-container {
+      background-color: white;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+    .login-container h2 {
+      margin-bottom: 25px;
+      text-align: center;
+      color: #2e7d32;
+    }
+    .form-group { margin-bottom: 20px; }
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #333;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    .form-group input:focus {
+      border-color: #2e7d32;
+      outline: none;
+    }
+    .login-button {
+      width: 100%;
+      padding: 12px;
+      background-color: #2e7d32;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .login-button:hover { background-color: #1b5e20; }
+    .login-footer {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+    .login-footer a {
+      color: #2e7d32;
+      text-decoration: none;
+    }
+    .login-footer a:hover { text-decoration: underline; }
+    @media (max-width: 480px) {
+      .login-container { padding: 30px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Login to Mess Portal</h2>
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required/>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required/>
+      </div>
+
+      <button type="submit" class="login-button">Login</button>
+    </form>
+    
+
+    <div class="login-footer">
+      Don't have an account? <a href="register.html">Register</a>
+    </div>
+  </div>
+</body>
+</html>
